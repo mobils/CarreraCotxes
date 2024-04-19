@@ -1,6 +1,7 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -17,7 +18,7 @@ public class Carretera extends Actor {
     public Carretera() {
         Texture carrera = new Texture("carrera.png");
         carretera= new TextureRegion(carrera, 118,122);
-
+        this.setColor(Color.WHITE);
         this.setSize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight()); //ocupa tota la pantalla
 
         MoveToAction mouEsquerra = new MoveToAction();
@@ -47,7 +48,7 @@ public class Carretera extends Actor {
 
     public void draw(Batch batch, float parentAlpha) {
         super.draw(batch, parentAlpha);
-
+        batch.setColor(this.getColor());
         batch.draw(carretera, getX()-getWidth(),getY(), this.getWidth()*2, this.getHeight());
     }
 

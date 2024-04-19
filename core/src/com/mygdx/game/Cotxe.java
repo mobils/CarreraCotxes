@@ -32,17 +32,17 @@ public class Cotxe extends Actor {
         bounds.set(getX(), getY(), getWidth(), getHeight());
 
         /********** MOVIMENT DEL COTXE */
-       /* if(Gdx.input.isTouched()) {
+        if(Gdx.input.isTouched()) {
             Vector3 touchPos = new Vector3();
             touchPos.set(Gdx.input.getX(), Gdx.input.getY(), 0);
 
             this.setX(touchPos.x - getWidth() / 2);
 
             this.setY(Gdx.graphics.getHeight()-touchPos.y - getHeight() / 2);
-      */    /*El 0,0 del input està al revès del 0,0 de la imatge,
+          /*El 0,0 del input està al revès del 0,0 de la imatge,
              per això s'ha de restar la mida de l'alçada */
 
-        //}
+        }
     }
 
 
